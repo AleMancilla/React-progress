@@ -6,19 +6,13 @@ const persona = {
     "Edad":24
 }
 
-const curso = {
-    "title":"React desde cero",
-    "precio":"57usd",
-    "imagen":"https://i.blogs.es/3cc483/1-hsisluifmo6kblfpoktlow/450_1000.jpeg"
-}
-
-const Card = () => (
+const Card = props => ( // props es un objeto que almacena todas las propiedades que se le envian
         <article class="card">
         <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-            <img src={curso.imagen} alt={curso.title} />
+            <img src={props.imagen} alt={props.title} />
         </div>
         <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-            <h3 className="center">{curso.title}</h3>
+            <h3 className="center">{props.title}</h3>
             <div class="s-mb-2 s-main-center">
             <div class="card__teacher s-cross-center">
                 <div class="card__avatar s-mr-1">
@@ -30,7 +24,7 @@ const Card = () => (
             </div>
             </div>
             <div class="s-main-center">
-            <a class="button--ghost-alert button--tiny" href="#">{`$ ${curso.precio}`}</a>
+            <a class="button--ghost-alert button--tiny" href="#">{`$ ${props.precio}`}</a>
             </div>
         </div>
         </article>

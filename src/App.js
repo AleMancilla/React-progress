@@ -19,11 +19,11 @@ const App = () => (
   </div>
 
   <div className="ed-grid m-grid-3">
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <Card 
+    title="React desde cero"
+    imagen="https://i.blogs.es/3cc483/1-hsisluifmo6kblfpoktlow/450_1000.jpeg"
+    precio="69 USD"
+    />
   </div>
 
   </>
