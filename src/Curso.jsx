@@ -10,9 +10,9 @@ const Card = () => (
             <img src="https://i.ytimg.com/vi/pGSI1o1K7FU/maxresdefault.jpg" alt="" />
         </div>
         <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-            <h3 class="t5 s-mb-2 s-center">
-            {mayorDeEdad(persona.Edad) ? "soy mayor de edad" : "soy menor de edad"}
-            </h3>
+            
+            {mayorDeEdad(persona.Edad) ? <h3>Soy mayor de edad</h3> : <p>soy menor de edad</p>}
+            
             <div class="s-mb-2 s-main-center">
             <div class="card__teacher s-cross-center">
                 <div class="card__avatar s-mr-1">
