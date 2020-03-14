@@ -8,7 +8,7 @@ const persona = {
 
 const curso = {
     "title":"React desde cero",
-    "precio":57,
+    "precio":"57usd",
     "imagen":"https://i.blogs.es/3cc483/1-hsisluifmo6kblfpoktlow/450_1000.jpeg"
 }
 
@@ -30,7 +30,7 @@ const Card = () => (
             </div>
             </div>
             <div class="s-main-center">
-            <a class="button--ghost-alert button--tiny" href="#">$ 20USD</a>
+            <a class="button--ghost-alert button--tiny" href="#">{`$ ${curso.precio}`}</a>
             </div>
         </div>
         </article>
