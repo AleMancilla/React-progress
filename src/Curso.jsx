@@ -1,18 +1,24 @@
 import React from 'react';
 
-const persona = {"nombre":"Alejandro","Apellido":"Mancilla","Edad":24}
-const mayorDeEdad = (edad) => (edad>18)
-//                  (parametros de entrada)=>(acciones)
+const persona = {
+    "nombre":"Alejandro",
+    "Apellido":"Mancilla",
+    "Edad":24
+}
+
+const curso = {
+    "title":"React desde cero",
+    "precio":57,
+    "imagen":"https://i.blogs.es/3cc483/1-hsisluifmo6kblfpoktlow/450_1000.jpeg"
+}
 
 const Card = () => (
         <article class="card">
         <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-            <img src="https://i.ytimg.com/vi/pGSI1o1K7FU/maxresdefault.jpg" alt="" />
+            <img src={curso.imagen} alt={curso.title} />
         </div>
         <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-            
-            {mayorDeEdad(persona.Edad) ? <h3>Soy mayor de edad</h3> : <p>soy menor de edad</p>}
-            
+            <h3 className="center">{curso.title}</h3>
             <div class="s-mb-2 s-main-center">
             <div class="card__teacher s-cross-center">
                 <div class="card__avatar s-mr-1">
