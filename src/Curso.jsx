@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+const persona = {"nombre":"Alejandro","Apellido":"Mancilla","Edad":24}
 const Card = () => (
         <article class="card">
         <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
@@ -8,7 +8,7 @@ const Card = () => (
         </div>
         <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
             <h3 class="t5 s-mb-2 s-center">
-            Programación orientada a objetos con Go
+            {`Hola mi nombre es ${persona.nombre} y tengo ${persona.Edad}`}
             </h3>
             <div class="s-mb-2 s-main-center">
             <div class="card__teacher s-cross-center">
