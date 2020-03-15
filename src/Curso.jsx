@@ -6,13 +6,13 @@ const persona = {
     "Edad":24
 }
 
-const Card = props => ( // props es un objeto que almacena todas las propiedades que se le envian
+const Card = ({title,imagen,precio}) => ( // props es un objeto que almacena todas las propiedades que se le envian
         <article class="card">
         <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-            <img src={props.imagen} alt={props.title} />
+            <img src={imagen ? imagen : "https://i.pinimg.com/originals/92/7c/b9/927cb936d41df0eb35958a65622c451c.jpg"} alt={title? title : "no hay titulo"} />
         </div>
         <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-            <h3 className="center">{props.title}</h3>
+            <h3 className="center">{title ? title : "no hay titulo"}</h3>
             <div class="s-mb-2 s-main-center">
             <div class="card__teacher s-cross-center">
                 <div class="card__avatar s-mr-1">
@@ -24,7 +24,7 @@ const Card = props => ( // props es un objeto que almacena todas las propiedades
             </div>
             </div>
             <div class="s-main-center">
-            <a class="button--ghost-alert button--tiny" href="#">{`$ ${props.precio}`}</a>
+            <a class="button--ghost-alert button--tiny" href="#">{`$ ${precio ? precio : "0 USD"}`}</a>
             </div>
         </div>
         </article>
