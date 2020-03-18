@@ -22,7 +22,7 @@ const App = () => (
   <>
     <Banner />
 
-    <Formulario />
+    <Formulario nombre="Alejandro" correo="ale@mancilla.com"/>
   
   </>
 )

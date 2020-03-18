@@ -14,14 +14,18 @@ class Formulario extends React.Component {
                 <form>
                 <div className="form__item">
                         <label>Nombre Completo:</label>
-                        <input type="text"></input>
+                        <input type="text" on></input>
                     </div>
                     <div className="form__item">
                         <label>Correo Electronico:</label>
-                        <input type="text"></input>
+                        <input type="email"></input>
                     </div>
                     <div className="form__item">
                         <input className="button full" type="submit" value="Enviar"></input>
+                    </div>
+                    <div>
+                        <h3>{`hola ${this.props.nombre}`}</h3>
+                        <span>{`tu correo es ${this.props.correo}`}</span>
                     </div>
                 </form>
             </div>
