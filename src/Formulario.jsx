@@ -12,6 +12,22 @@ class Formulario extends React.Component {
         //se le puede pasar en herencia pero como props
 
         // this.setState({recibe un objeto}) actualiza el estado
+
+        //para que el cambiarNombre pertenezca a this tenemos que hacer un bind
+        this.cambiarNombre = this.cambiarNombre.bind(this)
+        this.cambiarCorreo = this.cambiarCorreo.bind(this)
+    }
+
+    cambiarNombre (e){
+        this.setState({
+            nombre: e.target.value
+        })
+    }
+
+    cambiarCorreo (e){
+        this.setState({
+            correo: e.target.value
+        })
     }
 
     //metodo obligatorio
@@ -24,17 +40,13 @@ class Formulario extends React.Component {
                         <div className="form__item">
                             <label>Nombre Completo:</label>
                             <input type="text" 
-                            onChange={ e => this.setState({
-                                nombre: e.target.value
-                            }) /* hacemos un callback*/}>
+                            onChange={ this.cambiarNombre /* hacemos un callback*/}>
 
                             </input>
                         </div>
                         <div className="form__item">
                             <label>Correo Electronico:</label>
-                            <input type="email" onChange={ e => this.setState({
-                                correo: e.target.value
-                            })}></input>
+                            <input type="email" onChange={ this.cambiarCorreo}></input>
                         </div>
                     </div>
                     
