@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/styles.scss';
 import Card from './Curso';
 import Banner from './Banner'
-
+import Formulario from './Formulario'
 
 const cursos = [
   {
@@ -22,14 +22,10 @@ const App = () => (
   <>
     <Banner />
 
+    <Formulario />
+  
 
-  <div className="ed-grid m-grid-3">
 
-    {
-      cursos.map( curs => <Card title = {curs.titulo} imagen = {curs.image} precio = {curs.precio} profesor = {curs.profesor} /> )// no usamos forech por que solo recorre en cambio map construlle un nuevo array
-    }
-
-  </div>
 
   </>
 )
