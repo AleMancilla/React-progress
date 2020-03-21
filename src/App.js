@@ -1,20 +1,9 @@
 import React from 'react';
 import './styles/styles.scss';
-import Card from './Curso';
+import CourseGrid from './CourseGrid';
 import Banner from './Banner'
 import Formulario from './Formulario'
 
-const cursos = [
-  {
-    "titulo":"React desde cero", "image":"algo.jpg","precio":50,"profesor":"Alejandro Mancilla"
-  },{
-    "titulo":"HTML desde cero", "image":"algo.jpg","precio":80,"profesor":"Alejandro "
-  },{
-    "titulo":"GO desde cero", "image":"algo.jpg","precio":40,"profesor":" Mancilla"
-  },{
-    "titulo":"FLUTTER desde cero", "image":"algo.jpg","precio":30,"profesor":"Alejandro Mancilla"
-  }
-]
 
 
 const App = () => (
@@ -23,6 +12,8 @@ const App = () => (
     <Banner />
 
     <Formulario />
+
+    < CourseGrid />
   
   </>
 )

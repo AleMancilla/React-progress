@@ -31,7 +31,7 @@ class Formulario extends React.Component {
     }
 
     //metodo obligatorio
-    render(){
+    render(){ //es como el main
         return (
             <div className="ed-grid">
                 <h1>Formulario</h1>
