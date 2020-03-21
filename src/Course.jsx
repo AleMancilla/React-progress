@@ -37,9 +37,16 @@ const Course = ({match}) => { // props son las propiedades y se guardan en match
     
     return(
         <div className = "ed-grid m-grid-3">
-            <h1 className = "m-cols-3">{cursoActual.titulo}</h1>
-            <img className="m-cols-1" src ={cursoActual.image} at ="imagen"/>
-        <p className="m-cols-2">{cursoActual.profesor}</p>
+            {
+            cursoActual ? (
+                <>
+                    <h1 className = "m-cols-3">{cursoActual.titulo}</h1>
+                    <img className="m-cols-1" src ={cursoActual.image} at ="imagen"/>
+                    <p className="m-cols-2">{cursoActual.profesor}</p>
+                </> ) :
+                <h1>NO EXISTE</h1>
+           
+        }
         </div>
     )
 }
