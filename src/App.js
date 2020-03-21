@@ -4,22 +4,25 @@ import CourseGrid from './CourseGrid';
 import Banner from './Banner'
 import Formulario from './Formulario'
 
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 
 
 const App = () => (
   //segunda regla... solo puede devolver una cosa
   <Router>
-    <Route path = "/" exact component = { Banner /*ruta path es la ruta, exact es booleano t f, que componente imprime  */ }/>
-    <Route path = "/cursos" exact component = {CourseGrid} />
-    <Route path = "/Formulario" exact component = {() => <Formulario/> /* tambien puede recibir un callback */} />
-    <Route component = {() => (
-      <div className="ed-grid">
-        <h1>ERROR 404</h1>
-        <span>Pagina no encontrada</span>
-      </div>
-    ) } />
+    <Switch>
+      <Route path = "/" exact component = { Banner /*ruta path es la ruta, exact es booleano t f, que componente imprime  */ }/>
+      <Route path = "/cursos" exact component = {CourseGrid} />
+      <Route path = "/Formulario" exact component = {() => <Formulario/> /* tambien puede recibir un callback */} />
+      <Route component = {() => (
+        <div className="ed-grid">
+          <h1>ERROR 404</h1>
+          <span>Pagina no encontrada</span>
+        </div>
+      ) } />
+    </Switch>
+    
     
   </Router>
 )
