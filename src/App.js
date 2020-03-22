@@ -6,12 +6,14 @@ import Formulario from './Formulario'
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Course from './Course'
+import MainMenu from './MainMenu'
 
 
 
 const App = () => (
   //segunda regla... solo puede devolver una cosa
   <Router>
+    <MainMenu />
     <Switch>
       <Route path = "/" exact component = { Banner /*ruta path es la ruta, exact es booleano t f, que componente imprime  */ }/>
       <Route path = "/cursos/:id" exact component = {Course} />
