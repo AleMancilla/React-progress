@@ -2,10 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const Card = ({title,imagen,precio,profesor}) => ( // props es un objeto que almacena todas las propiedades que se le envian
+const Card = ({id,title,imagen,precio,profesor}) => ( // props es un objeto que almacena todas las propiedades que se le envian
         <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-            <img src={imagen} alt={title} />
+            <a href ={`/cursos/${id}`} >
+                <img src={imagen} alt={title} />
+            </a>
+            
         </div>
         <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
             <h3 classNameName="center">{title}</h3>
