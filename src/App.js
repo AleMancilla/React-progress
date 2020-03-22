@@ -7,6 +7,7 @@ import Formulario from './Formulario'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Course from './Course'
 import MainMenu from './MainMenu'
+import Historial from './Historial';
 
 
 
@@ -18,6 +19,7 @@ const App = () => (
       <Route path = "/" exact component = { Banner /*ruta path es la ruta, exact es booleano t f, que componente imprime  */ }/>
       <Route path = "/cursos/:id" exact component = {Course} />
       <Route path = "/cursos" exact component = {CourseGrid} />
+      <Route path = "/Historial" component = {Historial} />
       <Route path = "/Formulario" exact component = {() => <Formulario/> /* tambien puede recibir un callback */} />
       <Route component = {() => (
         <div className="ed-grid">
