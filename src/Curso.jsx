@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 
 const Card = ({id,title,imagen,precio,profesor}) => ( // props es un objeto que almacena todas las propiedades que se le envian
         <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-            <a href ={`/cursos/${id}`} >
+            <Link to ={`/cursos/${id}`} >
                 <img src={imagen} alt={title} />
-            </a>
+            </Link>
             
         </div>
         <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
