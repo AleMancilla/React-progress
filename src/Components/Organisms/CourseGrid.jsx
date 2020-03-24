@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Curso'
+import Card from '../Molecules/Curso'
 
 const cursos = [
     {
