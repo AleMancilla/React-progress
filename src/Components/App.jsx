@@ -8,6 +8,7 @@ import Course from './Pages/Course'
 import MainMenu from './Organisms/MainMenu'
 import Historial from './Pages/Historial';
 import Home from './Pages/Home';
+import Users from './Pages/Users';
 
 
 
@@ -17,10 +18,11 @@ const App = () => (
     <MainMenu />
     <Switch>
       <Route path = "/" exact component = { Home /*ruta path es la ruta, exact es booleano t f, que componente imprime  */ }/>
-      <Route path = "/cursos/:id" exact component = {Course} />
-      <Route path = "/cursos" exact component = {CourseGrid} />
+      <Route path = "/cursos/:id" component = {Course} />
+      <Route path = "/cursos"  component = {CourseGrid} />
       <Route path = "/Historial" component = {Historial} />
-      <Route path = "/Formulario" exact component = {() => <Formulario/> /* tambien puede recibir un callback */} />
+      <Route path = "/Formulario"  component = {() => <Formulario/> /* tambien puede recibir un callback */} />
+      <Route path = "/Users" component = {Users} />
       <Route component = {() => (
         <div className="ed-grid">
           <h1>ERROR 404</h1>
